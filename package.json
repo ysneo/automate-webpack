@@ -1,0 +1,23 @@
+{
+  "name": "webpack-init",
+  "version": "1.0.0",
+  "description": "webpack automate workflow",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ysneo/webpack-init.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ysneo/webpack-init/issues"
+  },
+  "homepage": "https://github.com/ysneo/webpack-init#readme",
+  "devDependencies": {
+    "webpack": "^2.3.3"
+  }
+}

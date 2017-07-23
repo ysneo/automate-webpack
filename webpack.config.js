@@ -10,29 +10,36 @@ const definePlugin = new webpack.DefinePlugin({
 
 const SRC = path.resolve(__dirname, 'src')
 
-module.exports = {
+const config = {
     entry: './src/main.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.js$/,
-                loader: 'babel-loader',
                 include: SRC,
-                query: {
-                    presets: ['env']
-                }
-            }, {
+                use: ['babel-loader',],
+                // query: {
+                //     presets: ['env']
+                // }
+            },
+            {
                 test: /\.css$/,
-                loader: 'style-loader!css-loader'
+                use: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: ['file-loader']
             }
         ]
     },
-    resolve: {
-        extensions: ['.js', '.json', '.css']
-    },
+    // resolve: {
+    //     extensions: ['.js', '.json', '.css']
+    // },
     plugins: [definePlugin]
 };
+
+module.exports = config;

@@ -4,5 +4,11 @@
     margin: 0 auto;
     text-align: center;
     color: white;
-    background-color: #282A36;
+    /* background-color: #282A36; */
+    background: url('./pic.jpg');
+}
+
+img{
+    display: block;
+    margin: 0 auto;
 }

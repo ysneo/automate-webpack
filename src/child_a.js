@@ -1,3 +1,4 @@
 module.exports = function (a, b) {
-    return a + b;
+    const z = 4;
+    return a + b + z;
 };

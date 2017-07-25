@@ -4,7 +4,9 @@
 import './child_a.css'
 import './main.css'
 import pic from './pic.jpg'
+import _ from 'underscore'
 
+const arr = [];
 
 function header() {
     const h1 = document.createElement('h1')
@@ -24,6 +26,9 @@ if (__DEV__) {
     console.warn('Extra logging')
     header()
     image()
+    if (_.isEmpty(arr)) {
+        console.log('This is an empty');
+    }
 }
 // ...
 if (__PRERELEASE__) {

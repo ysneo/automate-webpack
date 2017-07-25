@@ -5,6 +5,7 @@ import './child_a.css'
 import './main.css'
 import pic from './pic.jpg'
 import _ from 'underscore'
+import add from './child_a.js'
 
 const arr = [];
 
@@ -32,7 +33,7 @@ if (__DEV__) {
 }
 // ...
 if (__PRERELEASE__) {
-    const add = require('./child_a')
+
     const result = add(133, 2)
     console.log(result)
 }

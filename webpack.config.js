@@ -1,12 +1,20 @@
 const fs = require('fs')
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const config = {
     entry: {
-        index: './src/index.js',
-        print: './src/print.js'
+        print: './src/print.js',
+        app: './src/index.js'
     },
+    plugins: [
+        new CleanWebpackPlugin(['dist']),
+        new HtmlWebpackPlugin({
+            title: 'Output Management'
+        })
+    ],
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].bundle.js'

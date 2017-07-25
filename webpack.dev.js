@@ -20,7 +20,10 @@ const config = {
         new webpack.HotModuleReplacementPlugin(), // Enable HMR
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            title: 'Output Management'
+            title: 'Code Splitting'
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'common' // 公共函数 分离
         })
     ],
     output: {

@@ -1,4 +1,7 @@
+import _ from 'lodash'
+
 export default function printMe() {
-    alert(1)
-    console.log('Output Management')
+    const msg = _.join(['Output', 'Management', 'Orz'], ' ')
+    alert(msg)
+    console.log(msg)
 }

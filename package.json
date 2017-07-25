@@ -7,8 +7,7 @@
     "build": "webpack",
     "build:dev": "node_modules/.bin/webpack --env=dev --progress --profile --colors",
     "build:prod": "node_modules/.bin/webpack --env=prod --progress --profile --colors",
-    "w": "node_modules/.bin/webpack --watch",
-    "start": "webpack-dev-server --open",
+    "watch": "webpack-dev-server --env=dev --open",
     "production": "node_modules/.bin/webpack -p"
   },
   "repository": {
@@ -35,5 +34,7 @@
     "webpack": "^3.3.0",
     "webpack-dev-server": "^2.6.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
 }

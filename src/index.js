@@ -1,16 +1,16 @@
-// import _ from 'underscore'
-import printMe from './print.js'
-import './main.css'
+ import _ from 'lodash'
+ import printMe from './print.js'
+ import './main.css'
 
-function component() {
-    const element = document.createElement('div');
-    const btn = document.createElement('button');
+ function component() {
+     const element = document.createElement('div');
+     const btn = document.createElement('button');
+     const content = _.join(['hello', 'webpack', '!'], ' ')
+     element.innerHTML = content
+     btn.innerHTML = 'Click me and check console'
+     btn.onclick = printMe
+     element.appendChild(btn)
+     return element
+ }
 
-    element.innerHTML = 'Hello Webpack'
-    btn.innerHTML = 'Click me and check console'
-    btn.onclick = printMe
-    element.appendChild(btn)
-    return element
-}
-
-document.body.appendChild(component())
+ document.body.appendChild(component())

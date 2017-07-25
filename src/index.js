@@ -1,5 +1,6 @@
 import _ from 'underscore'
 import printMe from './print.js'
+import './main.css'
 
 function component() {
     const element = document.createElement('div');

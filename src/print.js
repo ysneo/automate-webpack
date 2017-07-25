@@ -1,3 +1,3 @@
 export default function printMe() {
-    cosnole.log('Output Management');
+    console.log('Output Management');
 }

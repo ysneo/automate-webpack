@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack",
     "dev": "node_modules/.bin/webpack",
-    "w": "node_modules/.bin/webpack --watch"
+    "w": "node_modules/.bin/webpack --watch",
+    "start": "webpack-dev-server --open"
   },
   "repository": {
     "type": "git",
@@ -29,7 +30,8 @@
     "html-webpack-plugin": "^2.29.0",
     "style-loader": "^0.18.2",
     "underscore": "^1.8.3",
-    "webpack": "^3.3.0"
+    "webpack": "^3.3.0",
+    "webpack-dev-server": "^2.6.1"
   },
   "dependencies": {}
 }

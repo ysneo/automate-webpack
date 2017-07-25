@@ -10,7 +10,14 @@ const config = {
         app: './src/index.js'
     },
     devtool: 'inline-source-map',
+    devServer: {
+        hot: true,
+        contentBase: path.join(__dirname, "dist"),
+        compress: true,
+        port: 9000
+    },
     plugins: [
+        new webpack.HotModuleReplacementPlugin(), // Enable HMR
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
             title: 'Output Management'
@@ -19,6 +26,12 @@ const config = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].bundle.js'
+    },
+    module: {
+        rules: [{
+            test: /\.css$/,
+            use: ['style-loader', 'css-loader']
+        }]
     }
 };
 

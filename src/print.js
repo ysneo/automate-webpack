@@ -1,3 +1,4 @@
 export default function printMe() {
-    console.log('Output Management');
+    alert(1)
+    console.log('Output Management')
 }
